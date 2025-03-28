@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbl06pwm5bqsu"]
+
+[ext_resource type="ArrayMesh" uid="uid://bxj44m2xvlqji" path="res://assets/chest.obj" id="1_veajb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sbd7b"]
+albedo_color = Color(0.678431, 0.360784, 0.211765, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ljcm2"]
+albedo_color = Color(0.678431, 0.360784, 0.211765, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fk3nr"]
+albedo_color = Color(0.678431, 0.360784, 0.211765, 1)
+
+[node name="Goal" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = ExtResource("1_veajb")
+surface_material_override/0 = SubResource("StandardMaterial3D_sbd7b")
+surface_material_override/1 = SubResource("StandardMaterial3D_ljcm2")
+surface_material_override/2 = SubResource("StandardMaterial3D_fk3nr")

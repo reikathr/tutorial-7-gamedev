@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://didm8aifj8ei4"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_mxcnt"]
+[ext_resource type="Script" path="res://scenes/Raycast.gd" id="2_y4h1v"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xm8c0"]
+albedo_color = Color(0.372549, 0.12549, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_e3vt3"]
+material = SubResource("StandardMaterial3D_xm8c0")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eckcc"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_mxcnt")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -3)
+debug_shape_custom_color = Color(0.703403, 0, 0.367716, 1)
+script = ExtResource("2_y4h1v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_e3vt3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_eckcc")

@@ -1,0 +1,219 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3irl8ggaqsxp"]
+
+[ext_resource type="PackedScene" uid="uid://didm8aifj8ei4" path="res://scenes/Player.tscn" id="1_sgqu4"]
+[ext_resource type="PackedScene" uid="uid://bhwlw8840gmyd" path="res://scenes/World1.tscn" id="1_u1y15"]
+[ext_resource type="PackedScene" uid="uid://dqwrkbjfi34k0" path="res://scenes/AreaTrigger.tscn" id="3_5w1jw"]
+[ext_resource type="PackedScene" uid="uid://cbl06pwm5bqsu" path="res://scenes/Goal.tscn" id="4_wwf13"]
+[ext_resource type="PackedScene" uid="uid://0pso63cb6w2u" path="res://scenes/ObjLamp.tscn" id="5_neum0"]
+[ext_resource type="PackedScene" uid="uid://def7epr1bthyn" path="res://scenes/Switch.tscn" id="6_l1wos"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="Switch" parent="." instance=ExtResource("6_l1wos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.53781, -1.53745, 19.0462)
+skeleton = NodePath("../ObjLamp3")
+
+[node name="Player" parent="." instance=ExtResource("1_sgqu4")]
+transform = Transform3D(0.999993, 0.00364773, 0, -0.00364773, 0.999993, 0, 0, 0, 1, 2.60724, -3.20549, 25.1247)
+
+[node name="World 1" parent="." instance=ExtResource("1_u1y15")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2787, 22.7434, 2.89745)
+light_energy = 20.0
+omni_range = 100.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.2946, 19.9362, -64.572)
+light_energy = 20.0
+omni_range = 100.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.938, 19.9362, -149.913)
+light_energy = 20.0
+omni_range = 100.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.4538, 19.9362, -98.0688)
+light_energy = 20.0
+omni_range = 100.0
+
+[node name="FallTrigger1" type="Node3D" parent="."]
+
+[node name="AreaTrigger" parent="FallTrigger1" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3142, -9.90395, 3.3742)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp")
+
+[node name="AreaTrigger2" parent="FallTrigger1" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.714, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp")
+
+[node name="AreaTrigger3" parent="FallTrigger1" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.224, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp")
+
+[node name="AreaTrigger4" parent="FallTrigger1" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.612, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp")
+
+[node name="AreaTrigger5" parent="FallTrigger1" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.896, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp")
+
+[node name="AreaTrigger6" parent="FallTrigger1" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41687, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp")
+
+[node name="FallTrigger2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5911, 0, -62.0834)
+
+[node name="AreaTrigger" parent="FallTrigger2" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3142, -9.90395, 3.3742)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp2")
+
+[node name="AreaTrigger2" parent="FallTrigger2" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.714, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp2")
+
+[node name="AreaTrigger3" parent="FallTrigger2" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.224, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp2")
+
+[node name="AreaTrigger4" parent="FallTrigger2" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.612, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp2")
+
+[node name="AreaTrigger5" parent="FallTrigger2" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.896, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp2")
+
+[node name="AreaTrigger6" parent="FallTrigger2" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41687, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp2")
+
+[node name="FallTrigger3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.3048, 0, -128.819)
+
+[node name="AreaTrigger" parent="FallTrigger3" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3142, -9.90395, 3.3742)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger2" parent="FallTrigger3" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.714, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger3" parent="FallTrigger3" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.224, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger4" parent="FallTrigger3" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.612, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger5" parent="FallTrigger3" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.896, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger6" parent="FallTrigger3" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41687, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="FallTrigger4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.3048, 0, -135.523)
+
+[node name="AreaTrigger" parent="FallTrigger4" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3142, -9.90395, 3.3742)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger2" parent="FallTrigger4" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.714, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger3" parent="FallTrigger4" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.224, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger4" parent="FallTrigger4" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.612, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger5" parent="FallTrigger4" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.896, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger6" parent="FallTrigger4" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41687, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="FallTrigger5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.3048, 0, -141.772)
+
+[node name="AreaTrigger" parent="FallTrigger5" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3142, -9.90395, 3.3742)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger2" parent="FallTrigger5" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.714, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger3" parent="FallTrigger5" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.224, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger4" parent="FallTrigger5" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.612, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger5" parent="FallTrigger5" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.896, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="AreaTrigger6" parent="FallTrigger5" instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41687, -9.904, 3.642)
+sceneName = "Level1"
+target_node_path = NodePath("../../ObjLamp3")
+
+[node name="Goal" parent="." instance=ExtResource("4_wwf13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 94.2576, -4.67108, -167.046)
+
+[node name="AreaTrigger7" parent="." instance=ExtResource("3_5w1jw")]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 94.1769, -1.6752, -165.673)
+sceneName = "WinScreen"
+
+[node name="ObjLamp" parent="." instance=ExtResource("5_neum0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.26749, -4.2572, 23.6388)
+
+[node name="ObjLamp2" parent="." instance=ExtResource("5_neum0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.6984, -4.2572, -28.0553)
+
+[node name="ObjLamp3" parent="." instance=ExtResource("5_neum0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.9272, -4.2572, -96.9276)
